@@ -9,13 +9,14 @@
     <div class="col-md-8 col-md-offset-1">
         <div class="well">
             <input type="button" id="btnLoadEmployees" class="btn btn-success" value="Load Employees" />
+            <span id="spanUsername" class="text-muted"></span>
             <input type="button" id="btnLogoff" class="btn btn-success pull-right" value="Log Off" />
 
         </div>
         <div class="well hidden" id="divData">
             <table class="table table-bordered" id="tblData">
-                <thead>
-                    <tr>
+                <thead >
+                    <tr class="success">
                         <td>ID</td>
                         <td>First Name</td>
                         <td>Last Name</td>
@@ -58,6 +59,8 @@
     <script src="Scripts/bootstrap.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
+
+            $('#spanUsername').text('Hello ' + (sessionStorage.getItem('userName')));
 
             if (sessionStorage.getItem('accessToken') == null) {
                 window.location.href = "Login.html";
