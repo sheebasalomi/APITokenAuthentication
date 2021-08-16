@@ -66,7 +66,7 @@
             $('#btnLogoff').click(function () {
                 sessionStorage.removeItem('accessToken');
                  window.location.href = "Login.html";
-
+                //if we close the browser, the data in sessionStorage will lose, localStorage will retain data even after closing the browser
             });
 
             $('#linkClose').click(function () {
