@@ -63,7 +63,7 @@
             $('#spanUsername').text('Hello ' + (sessionStorage.getItem('userName')));
 
             if (sessionStorage.getItem('accessToken') == null) {
-                window.location.href = "Login.html";
+                //window.location.href = "Login.html";
             }
 
             $('#btnLogoff').click(function () {
@@ -97,7 +97,7 @@
                      },
                     error: function (jqXHR) {
                         if (jqXHR.status == "401") {
-                            window.location.href = "Login.html";
+                            //window.location.href = "Login.html";
                         }
                         else {
                              $('#divErrorText').text(jqXHR.responseText);
